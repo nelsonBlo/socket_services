@@ -6,8 +6,8 @@ to use some of the socket module features.
 
 Files
 ---
-guess_number_single_client.py
-guess_number_multi_client.py
+- guess_number_single_client.py
+- guess_number_multi_client.py
 
 
 How to use them
