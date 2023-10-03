@@ -5,7 +5,7 @@ import threading
 number_to_guess = random.randrange(1, 9)
 
 
-def maneja_cliente(cl, ad):
+def client_driver(cl, ad):
     cl.send(b"Try to guess my number [1-9]! \n")
     cl.send(b"\rENTER or ESC to quit\n")
     while True:
@@ -35,5 +35,5 @@ if __name__ == '__main__':
             (cli, add) = socket_server.accept()
             print(f"Client connected at: {add}")
             # new thread for each new connection
-            th = threading.Thread(target=maneja_cliente, args=(cli, add))
+            th = threading.Thread(target=client_driver, args=(cli, add))
             th.start()
